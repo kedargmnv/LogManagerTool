@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Log Manager Tool** is a PowerShell-based application designed to manage log files efficiently. It provides a graphical user interface (GUI) for performing common log management tasks such as compressing logs, viewing logs, and searching logs by keywords. The tool supports handling large volumes of log files and integrates with 7-Zip for advanced compression capabilities.
+The **Log Manager Tool** is a PowerShell-based application designed to manage log files efficiently. It provides a graphical user interface (GUI) for performing common log management tasks such as compressing logs, viewing logs, and searching logs by keywords (even if they are stored in the archive). The tool supports handling large volumes of log files and integrates with 7-Zip for advanced compression capabilities.
 
 ---
 
@@ -30,20 +30,20 @@ The **Log Manager Tool** is a PowerShell-based application designed to manage lo
 
 ## Project Structure
 
-LogManagerTool/
-├── CompressLogs.ps1         # Handles log compression and archive management
-├── LogManagerGUI.ps1        # Main GUI logic and event handling
-├── LogManagerGUI.xaml       # XAML file defining the GUI layout
-├── SearchLogs.ps1           # Implements log search functionality
-├── ViewLogs.ps1             # Implements log viewing functionality
-├── Main.ps1                 # Entry point for launching the GUI
-├── README.md                # Documentation explaining the project and its features
-├── tools/
-│   └── 7zip/                # Contains 7-Zip command-line tool (7za.exe)
-│       ├── 7za.exe          # 7-Zip executable for compression
-│       ├── license.txt      # License information for 7-Zip
-│       ├── readme.txt       # Documentation for 7-Zip
-│       └── 7-zip.chm        # User manual for 7-Zip
+The project is organized as follows:
+
+- **CompressLogs.ps1**: Handles log compression and archive management.
+- **LogManagerGUI.ps1**: Main GUI logic and event handling.
+- **LogManagerGUI.xaml**: XAML file defining the GUI layout.
+- **SearchLogs.ps1**: Implements log search functionality.
+- **ViewLogs.ps1**: Implements log viewing functionality.
+- **Main.ps1**: Entry point for launching the GUI.
+- **README.md**: Documentation explaining the project and its features.
+- **tools/**: Contains the 7-Zip command-line tool (`7za.exe`).
+  - **7za.exe**: 7-Zip executable for compression.
+  - **license.txt**: License information for 7-Zip.
+  - **readme.txt**: Documentation for 7-Zip.
+  - **7-zip.chm**: User manual for 7-Zip.
 
 
 ## How to Use
@@ -77,7 +77,7 @@ LogManagerTool/
 
 - **PowerShell**: Version 5.1 or later.
 - **7-Zip**: The tool includes a portable version of 7-Zip (`7za.exe`) for compression.
-    Note: If 7-Zip is not found in the directory, a portable version of 7-Zip will be automatically downloaded to the `tools\7zip` directory.
+    If 7-Zip is not found in the directory, a portable version of 7-Zip will be automatically downloaded to the `tools\7zip` directory.
 
 ---
 
@@ -103,3 +103,6 @@ LogManagerTool/
 - The tool may experience performance issues with extremely large log directories.
 
 ---
+
+Enjoyed this? Consider supporting me!<br>
+<a href="https://www.buymeacoffee.com/kedargmnv" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
